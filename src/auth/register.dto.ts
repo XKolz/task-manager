@@ -2,6 +2,7 @@ import { IsString, IsOptional, IsIn, MinLength } from 'class-validator';
 
 export class RegisterDto {
   @IsString()
+  @MinLength(4, { message: 'Username must be at least 4 characters long' })
   username: string;
 
   @IsString()
